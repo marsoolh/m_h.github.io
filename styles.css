@@ -1,0 +1,62 @@
+/* Reset some default styles for consistency */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Style the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the tabs */
+.tabs {
+    display: flex;
+    margin: 20px 0;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab:hover {
+    background-color: #555;
+}
+
+/* Style the sections */
+.section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Style links in sections */
+.section a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
