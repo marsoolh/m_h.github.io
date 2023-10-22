@@ -7,7 +7,7 @@ body, h1, h2, p, ul, li {
 /* Set a background color and font for the body */
 body {
     font-family: Arial, sans-serif;
-    background-color: #adb5bd;
+    background-color: #ebe9e9;
 }
 
 /* Style the container */
@@ -39,7 +39,7 @@ body {
 
 /* Style the sections */
 .section {
-    background-color: #caf0f8;
+    background-color: #ebe9e9;
     border: 1px solid #ddd;
     padding: 20px;
     margin-top: 10px;
