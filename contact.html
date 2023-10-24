@@ -2,21 +2,27 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="script.js"></script>
-
 </head>
 <body>
     <div class="container">
         <div class="section" id="contact">
             <h2>Contact Me</h2>
-            <p>
-                Feel free to get in touch with me at chat@gmail.com.
-            </p>
-            <p>First Name: Your First Name</p>
-            <p>Last Name: Your Last Name</p>
-            <p>Email: Your Email</p>
+            <form id="contactForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <br>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
 </body>
 </html>
-
