@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const educationTab = document.querySelector('.tab[data-section="education"]');
     const experienceTab = document.querySelector('.tab[data-section="work"]');
     const projectsTab = document.querySelector('.tab[data-section="projects"]');
-    const contactTab = document.querySelector('.tab[data-section="contact"]'); // New "Contact" tab
+    const contactTab = document.querySelector('.tab[data-section="contact"]');
     const contactForm = document.getElementById('contactForm');
 
     aboutTab.addEventListener('click', () => {
@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollToSection('projects');
     });
 
-    // Event listener for the "Contact" tab
     contactTab.addEventListener('click', () => {
-        scrollToSection('contact');
+        // Show the contact modal and load "contact.html" content
+        contactModal.style.display = 'block';
+        loadContactForm(); // Function to load contact form content
     });
 
     contactForm.addEventListener('submit', async (e) => {
@@ -54,4 +55,25 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('An error occurred while sending the message. Please try again later.');
         }
     });
+
+    const contactModal = document.getElementById('contactModal');
+    const closeModal = document.getElementById('closeModal');
+    const contactFormContainer = document.getElementById('contactFormContainer');
+
+    closeModal.addEventListener('click', () => {
+        // Close the contact modal
+        contactModal.style.display = 'none';
+    });
+
+    // Function to load "contact.html" content into the modal
+    function loadContactForm() {
+        fetch('contact.html')
+            .then(response => response.text())
+            .then(data => {
+                contactFormContainer.innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading contact form:', error);
+            });
+    }
 });
