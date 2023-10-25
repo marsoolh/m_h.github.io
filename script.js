@@ -1,3 +1,11 @@
+// Define the scrollToSection function
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const aboutTab = document.querySelector('.tab[data-section="about"]');
     const educationTab = document.querySelector('.tab[data-section="education"]');
