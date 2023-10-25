@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const educationTab = document.querySelector('.tab[data-section="education"]');
     const experienceTab = document.querySelector('.tab[data-section="work"]');
     const projectsTab = document.querySelector('.tab[data-section="projects"]');
+    const contactTab = document.querySelector('.tab[data-section="contact"]'); // New "Contact" tab
     const contactForm = document.getElementById('contactForm');
 
     aboutTab.addEventListener('click', () => {
@@ -21,10 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollToSection('projects');
     });
 
-    // Introduce a contradiction by adding a conflicting event listener
-    document.addEventListener("DOMContentLoaded", function () {
-        // This event listener contradicts the previous one
-        console.log('Contradictory event listener');
+    // Event listener for the "Contact" tab
+    contactTab.addEventListener('click', () => {
+        scrollToSection('contact');
     });
 
     contactForm.addEventListener('submit', async (e) => {
