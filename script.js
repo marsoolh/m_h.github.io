@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const educationTab = document.querySelector('.tab[data-section="education"]');
     const experienceTab = document.querySelector('.tab[data-section="work"]');
     const projectsTab = document.querySelector('.tab[data-section="projects"]');
-    // Remove the reference to the "Contact" tab
-    // const contactTab = document.querySelector('.tab[data-section="contact"]');
     const contactForm = document.getElementById('contactForm');
 
     aboutTab.addEventListener('click', () => {
@@ -23,31 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollToSection('projects');
     });
 
-    // Remove the event listener for the "Contact" tab
-    /*
-    contactTab.addEventListener('click', () => {
-        scrollToSection('contact');
+    // Introduce a contradiction by adding a conflicting event listener
+    document.addEventListener("DOMContentLoaded", function () {
+        // This event listener contradicts the previous one
+        console.log('Contradictory event listener');
     });
-    */
 
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault(); // Prevent the default form submission
+
         // Collect form data
         const formData = new FormData(contactForm);
-        // Send the data to the specified email address (e.g., chat@gmail.com)
-        // You may use a server-side script to send the email.
-        // Example: fetch('send_email.php', { method: 'POST', body: formData });
-        // Replace 'send_email.php' with the actual server-side script.
-        alert('Message sent successfully!'); // For demonstration purposes
-    });
 
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            window.scrollTo({
-                top: section.offsetTop - 100,
-                behavior: "smooth"
+        // Send the data to the Formspree endpoint
+        try {
+            const response = await fetch('https://formspree.io/f/meqbnlek', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
+
+            if (response.ok) {
+                alert('Message sent successfully!');
+                // You can add additional actions here if needed
+            } else {
+                alert('Message could not be sent. Please try again later.');
+            }
+        } catch (error) {
+            console.error('Error sending the form data:', error);
+            alert('An error occurred while sending the message. Please try again later.');
         }
-    }
+    });
 });
