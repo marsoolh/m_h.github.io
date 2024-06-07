@@ -4,22 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add an event listener to all tab elements
     tabs.forEach(tab => {
-        tab.addEventListener('click', scrollToSection);
+        tab.addEventListener('click', jumpToSection);
     });
 
-    // Function to scroll to the clicked section
-    function scrollToSection(event) {
+    // Function to jump directly to the clicked section
+    function jumpToSection(event) {
         const sectionId = event.target.getAttribute('data-section');
         const section = document.getElementById(sectionId);
 
         if (section) {
-            section.scrollIntoView({
-                // Remove behavior option for instant scrolling
-                // behavior: 'smooth',
+            window.scrollTo({
+                top: section.offsetTop,
+                behavior: 'auto'
             });
         }
     }
-    
+
     // Optionally, activate the first section by default
     if (sections.length > 0) {
         sections[0].classList.add('active');
