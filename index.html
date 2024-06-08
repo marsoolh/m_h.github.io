@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Portfolio</title>
+    <title>Muhammad Hoque</title>
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <div class="name">Muhammad Hoque</div>
+            <div class="name"><a href="#home" class="home-link">Muhammad Hoque</a></div>
             <nav class="tabs">
                 <div class="tab" data-section="home">Home</div>
                 <div class="tab" data-section="education">Education</div>
@@ -17,18 +17,18 @@
                 <div class="tab" data-section="projects">Projects</div>
                 <div class="tab" data-section="contact">Contact</div>
             </nav>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+            <div class="hamburger" id="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </div>
-        <div class="mobile-nav">
-            <div class="mobile-tab" data-section="home">Home</div>
-            <div class="mobile-tab" data-section="education">Education</div>
-            <div class="mobile-tab" data-section="work">Experience</div>
-            <div class="mobile-tab" data-section="projects">Projects</div>
-            <div class="mobile-tab" data-section="contact">Contact</div>
+            <nav class="hamburger-menu" id="hamburger-menu">
+                <div class="tab" data-section="home">Home</div>
+                <div class="tab" data-section="education">Education</div>
+                <div class="tab" data-section="work">Experience</div>
+                <div class="tab" data-section="projects">Projects</div>
+                <div class="tab" data-section="contact">Contact</div>
+            </nav>
         </div>
     </header>
     <main class="container">
@@ -41,10 +41,10 @@
         </section>
         <section class="section" id="education">
             <h2>Education</h2>
-            <p style="line-height: 0.5;"><b>Bachelor of Science in Software Engineering</b>, <i>Western Governors University</i></p>
+            <p style="line-height: 1;"><b>Bachelor of Science in Software Engineering</b>, <i>Western Governors University</i></p>
             <p>Salt Lake City, Utah | December 2024</p>
-            <p><b>Bachelor of Science in Cybersecurity and Information Assurance</b>, <i>Western Governors University</i></p>
-            <p style="line-height: 0.5;">Salt Lake City, Utah | July 2023</p>
+            <p style="line-height: 1;"><b>Bachelor of Science in Cybersecurity and Information Assurance</b>, <i>Western Governors University</i></p>
+            <p>Salt Lake City, Utah | July 2023</p>
             <p style="line-height: 2.5;"><b>Professional Certifications:</b></p>
             <ul style="padding-left: 50px;">
                 <li><a href="https://www.credly.com/badges/51cbbbab-9d72-4098-9b42-a0367685e46d/public_url" target="_blank">ISC^2 SSCP</a></li>
@@ -76,22 +76,23 @@
             <h2>Projects</h2>
             <p>Explore some of my writings:</p>
             <ul style="padding-left: 50px;">
-                <li><a href="https://medium.com/@HoqueTechnology/does-obtaining-an-it-degree-from-wgu-hold-value-in-todays-industry-80012e5512c4" target="_blank"> Does obtaining an IT degree from WGU hold value in today’s industry?</a></li>
+                <li><a href="https://medium.com/@HoqueTechnology/does-obtaining-an-it-degree-from-wgu-hold-value-in-todays-industry-80012e5512c4" target="_blank">Does obtaining an IT degree from WGU hold value in today’s industry?</a></li>
                 <li><a href="https://medium.com/@HoqueTechnology/how-to-use-a-custom-domain-with-github-pages-84c93bc32889" target="_blank">How to Use a Custom Domain with GitHub Pages</a></li>
                 <li><a href="https://medium.com/@HoqueTechnology/the-perils-of-cheap-tech-gadgets-why-you-should-think-twice-before-buying-from-amazon-47faa60e6557" target="_blank">The Risks of Buying Cheap Tech</a></li>
             </ul>
             <h2>YouTube</h2>
             <p>Check out some of the videos from my YouTube channel:</p>
-            <div class="video-container" style="text-align: center;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/pUJwrKUejpc" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/pUJwrKUejpc" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="text-align: center;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UMRCdIPKOBA" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/UMRCdIPKOBA" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="video-container" style="text-align: center;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/xOCkys3yDb0" frameborder="0" allowfullscreen></iframe>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/xOCkys3yDb0" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
+        
         <section class="section" id="contact">
             <h2>Contact</h2>
             <p>Feel free to reach out to me:</p>

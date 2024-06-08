@@ -4,6 +4,10 @@ body, h1, h2, p, ul, li {
     padding: 0;
     box-sizing: border-box;
 }
+.home-link {
+    color: #333;
+    text-decoration: none;
+}
 
 /* Set a more aesthetically pleasing and readable font for the body */
 body {
@@ -40,34 +44,66 @@ body {
     color: #333;
 }
 
+/* Enhance the tab styles */
 .tabs {
     display: flex;
     gap: 10px;
 }
 
 .tab {
-    padding: 10px 5px;
+    padding: 10px 15px;
     font-weight: bold;
     cursor: pointer;
-    transition: color 0.3s, background-color 0.3s;
+    transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    background-color: #e8eaf6; /* Light background color */
+    color: #333; /* Dark text color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .tab:hover {
     color: #0078d4;
+    background-color: #d0d4e4; /* Slightly darker background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* Hamburger menu styles */
-.hamburger-menu {
+.hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     cursor: pointer;
 }
 
-.hamburger-menu .bar {
+.hamburger div {
     width: 25px;
     height: 3px;
     background-color: #333;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.hamburger-menu .tab {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.hamburger-menu .tab:hover {
+    background-color: #f0f0f0;
+}
+
+.hamburger-menu.active {
+    display: flex;
 }
 
 /* Mobile nav styles */
@@ -88,6 +124,27 @@ body {
     text-align: center;
     cursor: pointer;
     border-bottom: 1px solid #333;
+}
+
+/* Define a class for the degree and school information */
+.degree-info {
+    margin-bottom: 5px; /* Add some space between the degree info and the location/date */
+}
+
+/* Define a class for the location and date information */
+.location-date {
+    margin-top: -10px; /* Adjust this value to control the spacing */
+}
+
+/* Ensure that the spacing works well on mobile devices */
+@media (max-width: 768px) {
+    .degree-info {
+        margin-bottom: 3px; /* Adjust spacing for smaller screens */
+    }
+
+    .location-date {
+        margin-top: -8px; /* Adjust spacing for smaller screens */
+    }
 }
 
 /* Style the container */
@@ -135,7 +192,21 @@ h2 {
 
 /* Style for video containers */
 .video-container {
-    margin-top: 10px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* Optional: Ensure the first section is visually distinct */
@@ -146,20 +217,38 @@ h2 {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
+    .tabs {
+        display: none; /* Hide tabs container in mobile view */
     }
 
-    .tabs {
-        display: none;
+    .hamburger {
+        display: flex; /* Show hamburger icon */
     }
 
     .hamburger-menu {
-        display: flex;
+        display: none; /* Initially hide hamburger menu */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+    }
+
+    .hamburger-menu.active {
+        display: flex; /* Show hamburger menu when active */
     }
 
     .mobile-nav {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #a2ca9d;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
     }
 
     .mobile-nav.active {

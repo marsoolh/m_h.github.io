@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab, .mobile-tab');
-    const sections = document.querySelectorAll('.section');
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const mobileNav = document.querySelector('.mobile-nav');
+    const tabs = document.querySelectorAll('.tab');
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    const hamburger = document.getElementById('hamburger');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
 
     // Add an event listener to all tab elements
     tabs.forEach(tab => {
@@ -16,24 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (section) {
             window.scrollTo({
-                top: section.offsetTop,
-                behavior: 'auto'
+                top: section.offsetTop - headerHeight,
+                behavior: 'smooth'
             });
-        }
 
-        // Close the mobile nav after selection
-        if (mobileNav.classList.contains('active')) {
-            mobileNav.classList.remove('active');
+            // Close the hamburger menu if open
+            if (hamburgerMenu.classList.contains('active')) {
+                hamburgerMenu.classList.remove('active');
+            }
         }
     }
 
-    // Toggle the mobile nav menu
-    hamburgerMenu.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
+    // Toggle hamburger menu
+    hamburger.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
     });
-
-    // Optionally, activate the first section by default
-    if (sections.length > 0) {
-        sections[0].classList.add('active');
-    }
 });
