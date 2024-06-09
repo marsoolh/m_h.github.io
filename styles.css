@@ -46,7 +46,7 @@ body {
 /* Style the header */
 .header {
     background-color: #252A34;
-    border-bottom: 3px solid #333;
+    border-bottom: 3px solid #ffffff;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -61,7 +61,7 @@ body {
     align-items: center;
     max-width: 856.25px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px;
 }
 
 /* Style for the name section in the header */
