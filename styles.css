@@ -4,15 +4,40 @@ body, h1, h2, p, ul, li {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Style for links in the header */
 .home-link {
-    color: #333;
+    color: #ffffff; /* Set the color for Muhammad Hoque link */
     text-decoration: none;
 }
+
+/* Style for the tabs */
+.tab {
+    color: #000000; /* Set the color for all tabs */
+    cursor: pointer;
+}
+
+/* Style for the Blogs link */
+.blogs-link {
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Prevent Blogs link from changing tab colors */
+.blogs-link:hover {
+    color: #000000; /* Keep the color black when hovering over the Blogs link */
+}
+
+/* Additional style to prevent visited links from changing color */
+.tab a:visited {
+    color: #000000; /* Set the color for visited links within tabs */
+}
+
+
 
 /* Set a more aesthetically pleasing and readable font for the body */
 body {
     font-family: 'Source Code Pro', monospace;
-    background-color: #a2ca9d;
+    background-color: #252A34;
     color: #000000;
     line-height: 1.6;
     font-size: 16px;
@@ -20,7 +45,7 @@ body {
 
 /* Style the header */
 .header {
-    background-color: #a2ca9d;
+    background-color: #252A34;
     border-bottom: 3px solid #333;
     padding: 10px 0;
     position: fixed;
@@ -29,17 +54,19 @@ body {
     z-index: 1000;
 }
 
+/* Container for the header content */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 800px;
+    max-width: 856.25px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
+/* Style for the name section in the header */
 .name {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: #333;
 }
@@ -49,18 +76,25 @@ body {
     display: flex;
     gap: 10px;
 }
+/* Style for the tabs container */
+.tabs-container {
+    display: flex;
+    align-items: flex-start; /* Align tabs at the start (left side) */
+    /* Add other styles as needed */
+}
 
+/* Style for individual tabs */
 .tab {
-    padding: 10px 15px;
-    font-weight: bold;
+    padding: 5px 10px;
     cursor: pointer;
     transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
     border-radius: 5px;
     background-color: #e8eaf6; /* Light background color */
     color: #333; /* Dark text color */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.849); /* Light shadow */
 }
 
+/* Style for tab hover state */
 .tab:hover {
     color: #0078d4;
     background-color: #d0d4e4; /* Slightly darker background on hover */
@@ -75,12 +109,14 @@ body {
     cursor: pointer;
 }
 
+/* Individual bars in the hamburger icon */
 .hamburger div {
     width: 25px;
     height: 3px;
     background-color: #333;
 }
 
+/* Container for the hamburger menu items */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -88,52 +124,38 @@ body {
     top: 60px;
     right: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(0, 0, 0);
     z-index: 1001;
 }
 
+/* Style for tabs inside the hamburger menu */
 .hamburger-menu .tab {
-    padding: 10px;
+    padding: 20px; /* Increased padding for bigger touch targets */
     border-bottom: 1px solid #ddd;
     text-align: center;
+    font-size: 20px bold; /* Larger font size for better readability */
 }
 
+/* Style for tab hover state inside the hamburger menu */
 .hamburger-menu .tab:hover {
-    background-color: #f0f0f0;
+    background-color: #EFECEC;
 }
 
+/* Show the hamburger menu when active */
 .hamburger-menu.active {
     display: flex;
 }
 
-/* Mobile nav styles */
-.mobile-nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #a2ca9d;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-}
-
-.mobile-tab {
-    padding: 10px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    border-bottom: 1px solid #333;
-}
-
 /* Define a class for the degree and school information */
 .degree-info {
-    margin-bottom: 5px; /* Add some space between the degree info and the location/date */
+    line-height: 1.0; /* Set the line height to 1.0 for the degree info */
+    margin-bottom: -5px; /* Add some space between the degree info and the location/date */
 }
 
 /* Define a class for the location and date information */
 .location-date {
-    margin-top: -10px; /* Adjust this value to control the spacing */
+    line-height: 1.0; /* Set the line height to 1.0 for the location/date info */
+    margin-top: -5px; /* Adjust this value to control the spacing */
 }
 
 /* Ensure that the spacing works well on mobile devices */
@@ -143,7 +165,7 @@ body {
     }
 
     .location-date {
-        margin-top: -8px; /* Adjust spacing for smaller screens */
+        margin-top: -3px; /* Adjust spacing for smaller screens */
     }
 }
 
@@ -152,7 +174,7 @@ body {
     max-width: 800px;
     margin: 100px auto 20px auto; /* Adjust margin to account for fixed header */
     padding: 30px;
-    background-color: #e8eaf6;
+    background-color: #EEEEEE;
     /*box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); */
 }
 
@@ -164,16 +186,23 @@ body {
 /* Style headings */
 h1 {
     font-size: 32px;
-    color: #000000;
+    color: #FAFAF6;
 }
 
 h2 {
     font-size: 28px;
-    color: #333;
+    color: #686D76;
     margin-top: 20px;
     border-bottom: 3px solid #333;
     padding-bottom: 10px;
 }
+/* Apply the same style to paragraphs, unordered lists, and list items */
+p, ul, li {
+    font-size: 16px; /* Set font size */
+    color: #373A40; /* Set text color */
+    /* Add any other shared styles you need */
+}
+
 
 /* Style links in sections */
 .section a {
@@ -181,6 +210,7 @@ h2 {
     text-decoration: none;
 }
 
+/* Style for hovered links in sections */
 .section a:hover {
     text-decoration: underline;
 }
@@ -198,8 +228,10 @@ h2 {
     overflow: hidden;
     max-width: 100%;
     background: #000;
+    margin-bottom: 20px; /* Add some space at the bottom */
 }
 
+/* Ensure iframes inside video containers take up full space */
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -209,11 +241,13 @@ h2 {
     border: 0;
 }
 
-/* Optional: Ensure the first section is visually distinct */
+
+/* Optional: Ensure the first section is visually distinct 
 .section.active {
     border: 2px solid #0077ff;
-    padding: 10px; /* Adjust the value as needed */
+    padding: 10px;  
 }
+This doesn't work */
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
@@ -230,7 +264,8 @@ h2 {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        right: 20px;
+        right: 0; /* Align to the right edge */
+        width: 100%; /* Full width for each tab */
         background-color: #fff;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         z-index: 1001;
@@ -240,18 +275,12 @@ h2 {
         display: flex; /* Show hamburger menu when active */
     }
 
-    .mobile-nav {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #a2ca9d;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
+    .hamburger-menu .tab {
+        font-size: 20px; /* Larger font size */
+        padding: 10px; /* Increased padding */
     }
 
-    .mobile-nav.active {
-        display: flex;
+    .hamburger-menu .tab:hover {
+        background-color: #BFCFE7;
     }
 }
