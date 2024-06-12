@@ -90,17 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to check the authentication state and show/hide post form
-    function checkAuthState() {
-        firebase.auth().onAuthStateChanged((user) => {
-            if (user) {
-                document.getElementById('post-form').style.display = 'block';
-            } else {
-                document.getElementById('post-form').style.display = 'none';
-            }
-        });
-    }
-
     // Add event listener to the post form
     document.getElementById('new-post-form').addEventListener('submit', function (e) {
         e.preventDefault();
@@ -131,10 +120,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function loadPosts() {
         db.collection('posts').orderBy('createdAt', 'desc').onSnapshot((snapshot) => {
             const postsList = document.getElementById('blogs-list');
-            postsList.innerHTML = ''; // Clear the list before appending
+            // Clear only dynamically added posts, retain manually added posts
+            const dynamicPosts = postsList.querySelectorAll('.dynamic-post');
+            dynamicPosts.forEach(post => post.remove());
+
             snapshot.forEach((doc) => {
                 const post = doc.data();
                 const postElement = document.createElement('li');
+                postElement.classList.add('dynamic-post'); // Mark post as dynamically added
                 postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
                 postsList.appendChild(postElement);
             });
