@@ -6,12 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const hamburgerMenu = document.getElementById('hamburger-menu');
 
-    // Add an event listener to all tab elements
     tabs.forEach(tab => {
         tab.addEventListener('click', jumpToSection);
     });
 
-    // Function to jump directly to the clicked section
     function jumpToSection(event) {
         const sectionId = event.target.getAttribute('data-section');
         const section = document.getElementById(sectionId);
@@ -22,14 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 behavior: 'smooth'
             });
 
-            // Close the hamburger menu if open
             if (hamburgerMenu.classList.contains('active')) {
                 hamburgerMenu.classList.remove('active');
             }
         }
     }
 
-    // Toggle hamburger menu
     hamburger.addEventListener('click', () => {
         hamburgerMenu.classList.toggle('active');
     });
@@ -50,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then((userCredential) => {
-                // Signed in
                 loginPage.style.display = 'none';
                 loginButton.style.display = 'none';
                 logoutButton.style.display = 'block';
@@ -63,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     logoutButton.addEventListener('click', () => {
         firebase.auth().signOut().then(() => {
-            // Sign-out successful
             loginButton.style.display = 'block';
             logoutButton.style.display = 'none';
             checkAuthState();
@@ -88,7 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to check the authentication state and show/hide post form
     function checkAuthState() {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
@@ -99,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add event listener to the post form
     document.getElementById('new-post-form').addEventListener('submit', function (e) {
         e.preventDefault();
         const title = document.getElementById('post-title').value;
@@ -112,11 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             firebase.firestore().collection('posts').doc(postId).set({
                 ...sanitizedData,
-                userId: firebase.auth().currentUser.uid, // Store the user's ID
+                userId: firebase.auth().currentUser.uid,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             }).then(() => {
-                alert('Post added successfully!');
-                window.location.reload();
+                console.log('Post added successfully!');
+                document.getElementById('new-post-form').reset();
+                fetchPosts();
             }).catch((error) => {
                 console.error("Error adding post: ", error);
             });
@@ -125,30 +118,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fetch and display posts from the database
-    firebase.firestore().collection('posts').onSnapshot((snapshot) => {
-        const postsList = document.getElementById('blogs-list');
-        postsList.innerHTML = '';
-        snapshot.forEach((doc) => {
-            const post = doc.data();
-            const postElement = document.createElement('li');
-            postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
-            postsList.appendChild(postElement);
+    function fetchPosts() {
+        firebase.firestore().collection('posts').onSnapshot((snapshot) => {
+            const postsList = document.getElementById('blogs-list');
+            postsList.innerHTML = '';
+            snapshot.forEach((doc) => {
+                const post = doc.data();
+                const postElement = document.createElement('li');
+                postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
+                postsList.appendChild(postElement);
+            });
         });
-    });
+    }
+
+    fetchPosts();
 });
 
-// Function to validate and sanitize post data
 function validateAndSanitizePostData(title, content, date) {
-    // Simple validation checks
     if (!title || !content || !date) {
         return false;
     }
 
-    // Sanitize inputs to prevent XSS
     const sanitizedTitle = title.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const sanitizedContent = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const sanitizedDate = date; // Assuming date is in a valid format
+    const sanitizedDate = date;
 
     return {
         title: sanitizedTitle,
