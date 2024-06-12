@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchPosts() {
         firebase.firestore().collection('posts').onSnapshot((snapshot) => {
             const postsList = document.getElementById('blogs-list');
-            postsList.innerHTML = '';
+            postsList.innerHTML = ''; // Clear the current list
             snapshot.forEach((doc) => {
                 const post = doc.data();
                 const postElement = document.createElement('li');
