@@ -10,12 +10,51 @@
 
         gtag('config', 'G-2G8F113GGM');
     </script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyAZf--SP3Rh9mg-IncpvoQ0DRfBZFipI_A",
+            authDomain: "muhammadhoque-6647b.firebaseapp.com",
+            databaseURL: "https://muhammadhoque-6647b.firebaseio.com",
+            projectId: "muhammadhoque-6647b",
+            storageBucket: "muhammadhoque-6647b.appspot.com",
+            messagingSenderId: "787651039753",
+            appId: "1:787651039753:web:81b18fab3d4667fdf81ed8"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Muhammad Hoque</title>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="top-right">
+            <button id="login-button" class="login-button">Sign In</button>
+            <button id="logout-button" class="logout-button" style="display: none;">Sign Out</button>
+        </div>
+    </div>
+
+    <div id="login-page" class="full-page">
+        <div id="login-container">
+            <button id="close-login" class="close-button">&times;</button>
+            <h2>Sign In</h2>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="login-submit">Login</button>
+        </div>
+    </div>
+    
     <header class="header">
         <div class="header-container">
             <div class="name"><a href="index.html" class="home-link">Muhammad Hoque</a></div>
