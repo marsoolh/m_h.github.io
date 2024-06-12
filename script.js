@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginPage.style.display = 'none';
                 loginButton.style.display = 'none';
                 logoutButton.style.display = 'block';
-                checkAuthState();
+                loadPosts(); // Load posts after login
             })
             .catch((error) => {
                 console.error('Error signing in:', error);
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Sign-out successful
             loginButton.style.display = 'block';
             logoutButton.style.display = 'none';
-            checkAuthState();
+            document.getElementById('post-form').style.display = 'none';
         }).catch((error) => {
             console.error('Error signing out:', error);
         });
@@ -81,10 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
             loginButton.style.display = 'none';
             logoutButton.style.display = 'block';
             document.getElementById('post-form').style.display = 'block';
+            loadPosts(); // Load posts when user is authenticated
         } else {
             loginButton.style.display = 'block';
             logoutButton.style.display = 'none';
             document.getElementById('post-form').style.display = 'none';
+            loadPosts(); // Load posts for non-authenticated users
         }
     });
 
@@ -116,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             }).then(() => {
                 alert('Post added successfully!');
-                window.location.reload();
+                loadPosts(); // Load posts after adding a new post
             }).catch((error) => {
                 console.error("Error adding post: ", error);
             });
@@ -125,17 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Fetch and display posts from the database
-    db.collection('posts').onSnapshot((snapshot) => {
-        const postsList = document.getElementById('blogs-list');
-        postsList.innerHTML = '';
-        snapshot.forEach((doc) => {
-            const post = doc.data();
-            const postElement = document.createElement('li');
-            postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
-            postsList.appendChild(postElement);
+    // Function to fetch and display posts from the database
+    function loadPosts() {
+        db.collection('posts').orderBy('createdAt', 'desc').onSnapshot((snapshot) => {
+            const postsList = document.getElementById('blogs-list');
+            postsList.innerHTML = ''; // Clear the list before appending
+            snapshot.forEach((doc) => {
+                const post = doc.data();
+                const postElement = document.createElement('li');
+                postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
+                postsList.appendChild(postElement);
+            });
         });
-    });
+    }
+
+    // Load posts initially
+    loadPosts();
 });
 
 // Function to validate and sanitize post data
