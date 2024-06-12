@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sanitizedData = validateAndSanitizePostData(title, content, date);
         if (sanitizedData) {
-            const postId = firebase.firestore().collection('posts').doc().id;
+            const postId = db.collection('posts').doc().id;
 
-            firebase.firestore().collection('posts').doc(postId).set({
+            db.collection('posts').doc(postId).set({
                 ...sanitizedData,
                 userId: firebase.auth().currentUser.uid, // Store the user's ID
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Fetch and display posts from the database
-    firebase.firestore().collection('posts').onSnapshot((snapshot) => {
+    db.collection('posts').onSnapshot((snapshot) => {
         const postsList = document.getElementById('blogs-list');
         postsList.innerHTML = '';
         snapshot.forEach((doc) => {
