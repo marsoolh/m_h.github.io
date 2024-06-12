@@ -7,6 +7,7 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+
         gtag('config', 'G-2G8F113GGM');
     </script>
 
@@ -14,8 +15,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
     <!-- Firebase Authentication -->
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <!-- Firebase Firestore -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
     <script>
         var firebaseConfig = {
@@ -29,13 +30,12 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore(); // Initialize Firestore
     </script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Blogs</title>
+    <title>Muhammad Hoque</title>
 </head>
 <body>
     <div class="top-bar">
@@ -54,7 +54,7 @@
             <button id="login-submit">Login</button>
         </div>
     </div>
-
+    
     <header class="header">
         <div class="header-container">
             <div class="name"><a href="index.html" class="home-link">Muhammad Hoque</a></div>
@@ -98,6 +98,7 @@
                     <p>Date Published: February 1, 2024</p>
                     <p>Description: A brief overview of what the blog is about.</p>
                 </li>
+                <!-- Add more blogs as needed -->
             </ul>
         </section>
         
@@ -112,6 +113,6 @@
         </section>
     </main>
     
-    <script src="blogs.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

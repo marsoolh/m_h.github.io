@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginPage.style.display = 'none';
                 loginButton.style.display = 'none';
                 logoutButton.style.display = 'block';
-                loadPosts(); // Load posts after login
+                checkAuthState();
             })
             .catch((error) => {
                 console.error('Error signing in:', error);
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Sign-out successful
             loginButton.style.display = 'block';
             logoutButton.style.display = 'none';
-            document.getElementById('post-form').style.display = 'none';
+            checkAuthState();
         }).catch((error) => {
             console.error('Error signing out:', error);
         });
@@ -81,14 +81,23 @@ document.addEventListener('DOMContentLoaded', () => {
             loginButton.style.display = 'none';
             logoutButton.style.display = 'block';
             document.getElementById('post-form').style.display = 'block';
-            loadPosts(); // Load posts when user is authenticated
         } else {
             loginButton.style.display = 'block';
             logoutButton.style.display = 'none';
             document.getElementById('post-form').style.display = 'none';
-            loadPosts(); // Load posts for non-authenticated users
         }
     });
+
+    // Function to check the authentication state and show/hide post form
+    function checkAuthState() {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                document.getElementById('post-form').style.display = 'block';
+            } else {
+                document.getElementById('post-form').style.display = 'none';
+            }
+        });
+    }
 
     // Add event listener to the post form
     document.getElementById('new-post-form').addEventListener('submit', function (e) {
@@ -99,15 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const sanitizedData = validateAndSanitizePostData(title, content, date);
         if (sanitizedData) {
-            const postId = db.collection('posts').doc().id;
+            const postId = firebase.firestore().collection('posts').doc().id;
 
-            db.collection('posts').doc(postId).set({
+            firebase.firestore().collection('posts').doc(postId).set({
                 ...sanitizedData,
                 userId: firebase.auth().currentUser.uid, // Store the user's ID
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
             }).then(() => {
                 alert('Post added successfully!');
-                loadPosts(); // Load posts after adding a new post
+                window.location.reload();
             }).catch((error) => {
                 console.error("Error adding post: ", error);
             });
@@ -116,26 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to fetch and display posts from the database
-    function loadPosts() {
-        db.collection('posts').orderBy('createdAt', 'desc').onSnapshot((snapshot) => {
-            const postsList = document.getElementById('blogs-list');
-            // Clear only dynamically added posts, retain manually added posts
-            const dynamicPosts = postsList.querySelectorAll('.dynamic-post');
-            dynamicPosts.forEach(post => post.remove());
-
-            snapshot.forEach((doc) => {
-                const post = doc.data();
-                const postElement = document.createElement('li');
-                postElement.classList.add('dynamic-post'); // Mark post as dynamically added
-                postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
-                postsList.appendChild(postElement);
-            });
+    // Fetch and display posts from the database
+    firebase.firestore().collection('posts').onSnapshot((snapshot) => {
+        const postsList = document.getElementById('blogs-list');
+        postsList.innerHTML = '';
+        snapshot.forEach((doc) => {
+            const post = doc.data();
+            const postElement = document.createElement('li');
+            postElement.innerHTML = `<b>${post.title}</b><p>Date Published: ${post.date}</p><p>${post.content}</p>`;
+            postsList.appendChild(postElement);
         });
-    }
-
-    // Load posts initially
-    loadPosts();
+    });
 });
 
 // Function to validate and sanitize post data
