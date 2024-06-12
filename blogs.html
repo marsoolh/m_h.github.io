@@ -7,63 +7,24 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
+    
         gtag('config', 'G-2G8F113GGM');
     </script>
-
-    <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <!-- Firebase Authentication -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-    <!-- Firebase Firestore -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-
-    <script>
-        var firebaseConfig = {
-            apiKey: "AIzaSyAZf--SP3Rh9mg-IncpvoQ0DRfBZFipI_A",
-            authDomain: "muhammadhoque-6647b.firebaseapp.com",
-            databaseURL: "https://muhammadhoque-6647b.firebaseio.com",
-            projectId: "muhammadhoque-6647b",
-            storageBucket: "muhammadhoque-6647b.appspot.com",
-            messagingSenderId: "787651039753",
-            appId: "1:787651039753:web:81b18fab3d4667fdf81ed8"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Muhammad Hoque</title>
+    <title>Blogs - Muhammad Hoque</title>
 </head>
 <body>
-    <div class="top-bar">
-        <div class="top-right">
-            <button id="login-button" class="login-button">Sign In</button>
-            <button id="logout-button" class="logout-button" style="display: none;">Sign Out</button>
-        </div>
-    </div>
-
-    <div id="login-page" class="full-page">
-        <div id="login-container">
-            <button id="close-login" class="close-button">&times;</button>
-            <h2>Sign In</h2>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button id="login-submit">Login</button>
-        </div>
-    </div>
-    
     <header class="header">
         <div class="header-container">
             <div class="name"><a href="index.html" class="home-link">Muhammad Hoque</a></div>
             <nav class="tabs">
-                <div class="tab"><a href="index.html" class="home-link">Home</a></div>
-                <div class="tab"><a href="index.html#education" class="home-link">Education</a></div>
-                <div class="tab"><a href="index.html#work" class="home-link">Experience</a></div>
-                <div class="tab"><a href="index.html#projects" class="home-link">Projects</a></div>
-                <div class="tab"><a href="index.html#contact" class="home-link">Contact</a></div>
+                <div class="tab" data-section="home"><a href="index.html" class="home-link">Home</a></div>
+                <div class="tab" data-section="education"><a href="index.html#education" class="home-link">Education</a></div>
+                <div class="tab" data-section="work"><a href="index.html#work" class="home-link">Experience</a></div>
+                <div class="tab" data-section="projects"><a href="index.html#projects" class="home-link">Projects</a></div>
+                <div class="tab" data-section="contact"><a href="index.html#contact" class="home-link">Contact</a></div>
                 <div class="tab"><a href="blogs.html" class="home-link">Blogs</a></div>
             </nav>
             <div class="hamburger" id="hamburger">
@@ -81,11 +42,40 @@
             </nav>
         </div>
     </header>
-
     <main class="container">
         <section class="section" id="blogs">
             <h2>Blogs</h2>
-            <ul id="blogs-list">
+            <ul>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-1" target="_blank"><b>Sample Blog 1</b></a>
+                    <p>Date Published: January 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-2" target="_blank"><b>Sample Blog 2</b></a>
+                    <p>Date Published: February 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-1" target="_blank"><b>Sample Blog 1</b></a>
+                    <p>Date Published: January 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-2" target="_blank"><b>Sample Blog 2</b></a>
+                    <p>Date Published: February 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-1" target="_blank"><b>Sample Blog 1</b></a>
+                    <p>Date Published: January 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
+                <li>
+                    <a href="https://medium.com/@HoqueTechnology/sample-blog-2" target="_blank"><b>Sample Blog 2</b></a>
+                    <p>Date Published: February 1, 2024</p>
+                    <p>Description: A brief overview of what the blog is about.</p>
+                </li>
                 <li>
                     <a href="https://medium.com/@HoqueTechnology/sample-blog-1" target="_blank"><b>Sample Blog 1</b></a>
                     <p>Date Published: January 1, 2024</p>
@@ -97,27 +87,9 @@
                     <p>Description: A brief overview of what the blog is about.</p>
                 </li>
                 <!-- Add more blogs as needed -->
-            <li>
-<a href="#" class="post-title"><b>Sample Blog 1</b></a>
-<p>Date Published: 2024-06-13</p>
-<p>hello, 
-
-this is a sample blog</p>
-</li></ul>
-        </section>
-        
-        <section class="section" id="post-form" style="display: none;">
-            <h2>Add Blog Post</h2>
-            <form id="new-post-form">
-                <input type="text" id="post-title" placeholder="Title" required>
-                <textarea id="post-content" placeholder="Content" required></textarea>
-                <input type="date" id="post-date" required>
-                <input type="url" id="post-link" placeholder="Link (optional)">
-                <button type="submit">Add Post</button>
-            </form>
+            </ul>
         </section>
     </main>
-    
     <script src="script.js"></script>
 </body>
 </html>
