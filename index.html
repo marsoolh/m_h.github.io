@@ -20,12 +20,9 @@
         <div class="header-container">
             <div class="name"><a href="index.html" class="home-link">Muhammad Hoque</a></div>
             <nav class="tabs">
-                <div class="tab" data-section="home">Home</div>
-                <div class="tab" data-section="education">Education</div>
-                <div class="tab" data-section="work">Experience</div>
-                <div class="tab" data-section="projects">Projects</div>
-                <div class="tab" data-section="contact">Contact</div>
-                <div class="tab"><a href="blogs.html" class="blogs-link">Blogs</a></div> 
+                <div class="tab"><a href="#about">About</a></div>
+                <div class="tab"><a href="projects.html">Projects</a></div>
+                <div class="tab"><a href="blogs.html" class="blogs-link">Blogs</a></div>
             </nav>
             <div class="hamburger" id="hamburger">
                 <div></div>
@@ -33,46 +30,86 @@
                 <div></div>
             </div>
             <nav class="hamburger-menu" id="hamburger-menu">
-                <div class="tab" data-section="home">Home</div>
-                <div class="tab" data-section="education">Education</div>
-                <div class="tab" data-section="work">Experience</div>
-                <div class="tab" data-section="projects">Projects</div>
-                <div class="tab" data-section="contact">Contact</div>
-                <div class="tab"><a href="blogs.html" class="blogs-link">Blogs</a></div> 
+                <div class="tab"><a href="#about">About</a></div>
+                <div class="tab"><a href="projects.html">Projects</a></div>
+                <div class="tab"><a href="blogs.html" class="blogs-link">Blogs</a></div>
             </nav>
         </div>
-    </header>
-    
+    </header>    
     <main class="container">
-        <section class="section" id="home">
+        <section class="section" id="about">
             <h2>About Me</h2>
-            <p>Hi there! This is Muhammad Hoque, a tech enthusiast with a passion for problem-solving. I'm an IT Specialist working at Amazon as an IT Equipment Coordinator. 
-                I have a Bachelor's degree in Cybersecurity and hold multiple inudstry certifications. 
-                Currently, I am pursuing a second Bachelor's degree in Software Engineering in my free time.</p>
-            <p>I also enjoy writing and making videos about tech. You can find some of my writings in <a href="https://medium.com/@HoqueTechnology" target="_blank">Medium</a> and tech videos at
-                 <a href="https://youtube.com/@HoqueTechnology" target="_blank">Hoque Technology</a>.</p>
+            <div class="about-me-intro">
+                <p>Hi There! 👋</p>
+                <p>This is Muhammad Hoque, a Security Engineer and a final-year Software Engineering student. I specialize in software engineering and cybersecurity.</p>
+                <div class="contact-options">
+                    <div class="contact-box">
+                        <a href="https://www.linkedin.com/in/muhammadhoque" target="_blank" class="contact-link">
+                            <img src="linkedin-icon.png" alt="LinkedIn" class="contact-icon">
+                            <p>Open to Work</p>
+                        </a>
+                    </div>
+                    <div class="contact-box">
+                        <a href="mailto:your-email@example.com" class="contact-link">
+                            <img src="email-icon.png" alt="Email" class="contact-icon">
+                            <p>Get in Touch</p>
+                        </a>
+                    </div>
+                </div>
+            </div>            
+            <div class="about-me-details">
+                <h3>➕ More About Me</h3>
+                <p>Currently, I am working at Amazon as an IT Equipment Coordinator. I have a Bachelor's degree in Cybersecurity and hold multiple industry certifications. Also, I am pursuing a second Bachelor's degree in Software Engineering alongside my full-time work.</p>
+                <p>I also enjoy writing and making videos about tech. You can find some of my writings on <a href="https://medium.com/@HoqueTechnology" target="_blank">Medium</a> and tech videos at <a href="https://youtube.com/@HoqueTechnology" target="_blank">Hoque Technology</a>.</p>
+            </div>
         </section>
+                   
         <section class="section" id="education">
-            <h2>Education</h2>
-            <p style="line-height: 1;"><b>Bachelor of Science in Software Engineering</b>, <i>Western Governors University</i></p>
-            <p>Salt Lake City, Utah | 03/2024 to 12/2024</p>
-            <p style="line-height: 1;"><b>Bachelor of Science in Cybersecurity and Information Assurance</b>, <i>Western Governors University</i></p>
-            <p>Salt Lake City, Utah | 07/2022 to 07/2023</p>
-            <p style="line-height: 2.5;"><b>Professional Certifications:</b></p>
-            <ul style="padding-left: 50px;">
-                <li><a href="https://www.credly.com/badges/51cbbbab-9d72-4098-9b42-a0367685e46d/public_url" target="_blank">ISC^2 SSCP</a></li>
-                <li><a href="https://www.credly.com/badges/c922bbb2-5f6c-43e8-9009-4960c3bbf507/public_url" target="_blank">CompTIA PenTest+</a></li>
-                <li><a href="https://www.credly.com/badges/49373eb2-af72-4974-86c9-9117034bcd69/public_url" target="_blank">CompTIA Security+</a></li>
-                <li><a href="https://www.credly.com/badges/54ac0f98-4ac2-4345-a6c9-bf8a344fb60b" target="_blank">CompTIA Network+</a></li>
-                <li><a href="https://www.credly.com/badges/1c8ae2ce-284b-4c17-8652-017c73066feb" target="_blank">CompTIA A+</a></li>
-                <li><a href="https://www.credly.com/badges/5138afc3-fd93-474d-a261-d7a530ef8d2d" target="_blank">AWS Certified Cloud Practitioner</a></li>
-            </ul>
+            <h2>🎓 Education</h2>
+            <div class="education-section">
+                <div class="education-item">
+                    <h3>Bachelor of Science in Software Engineering</h3>
+                    <p>Western Governors University</p>
+                    <p>Salt Lake City, Utah | 03/2024 to 12/2024</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Cybersecurity and Information Assurance</h3>
+                    <p>Western Governors University</p>
+                    <p>Salt Lake City, Utah | 07/2022 to 07/2023</p>
+                </div>
+            </div>
         </section>
-        <section class="section" id="work">
+        
+        <section class="section" id="certifications">
+            <h2>🏆 Certifications</h2>
+            <div class="certifications-section">
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/51cbbbab-9d72-4098-9b42-a0367685e46d/public_url" target="_blank">Associate of ISC2 SSCP</a></h4>
+                </div>
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/c922bbb2-5f6c-43e8-9009-4960c3bbf507/public_url" target="_blank">CompTIA PenTest+</a></h4>
+                </div>
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/49373eb2-af72-4974-86c9-9117034bcd69/public_url" target="_blank">CompTIA Security+</a></h4>
+                </div>
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/54ac0f98-4ac2-4345-a6c9-bf8a344fb60b" target="_blank">CompTIA Network+</a></h4>
+                </div>
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/1c8ae2ce-284b-4c17-8652-017c73066feb" target="_blank">CompTIA A+</a></h4>
+                </div>
+                <div class="certification-item">
+                    <h4><a href="https://www.credly.com/badges/5138afc3-fd93-474d-a261-d7a530ef8d2d" target="_blank">AWS CCP</a></h4>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section professional-experience-section">
             <h2>Professional Experience</h2>
-            <b>IT Equipment Coordinator / FC Associate I | Amazon | Detroit, MI | 2022 – Present</b>
-            <p>As an IT Equipment Coordinator at Amazon, I play a pivotal role in ensuring smooth IT operations. My responsibilities include:</p>
-                <ul style="padding-left: 50px;">
+            <div class="professional-experience-item">
+                <h4>IT Equipment Coordinator / FC Associate I | Amazon | Detroit, MI | 2022 – Present</h4>
+                <p>As an IT Equipment Coordinator at Amazon, I play a pivotal role in ensuring smooth IT operations. My responsibilities include:</p>
+                <ul>
                     <li>Procuring IT equipment and peripherals in line with business needs and budget constraints.</li>
                     <li>Maintaining accurate inventory records of all IT hardware and peripherals.</li>
                     <li>Coordinating equipment requests and distribution to various teams and employees.</li>
@@ -84,37 +121,28 @@
                     <li>Handling the disposal or recycling of outdated or obsolete equipment in an environmentally responsible manner.</li>
                     <li>Maintaining documentation related to equipment specifications, configurations, and usage guidelines.</li>
                 </ul>
-        </section>
-        <section class="section" id="projects">
-            <h2>Projects</h2>
-            <p>Explore some of my writings:</p>
-            <ul style="padding-left: 50px;">
-                <li><a href="https://medium.com/@HoqueTechnology/does-obtaining-an-it-degree-from-wgu-hold-value-in-todays-industry-80012e5512c4" target="_blank">Does obtaining an IT degree from WGU hold value in today’s industry?</a></li>
-                <li><a href="https://medium.com/@HoqueTechnology/how-to-use-a-custom-domain-with-github-pages-84c93bc32889" target="_blank">How to Use a Custom Domain with GitHub Pages</a></li>
-                <li><a href="https://medium.com/@HoqueTechnology/the-perils-of-cheap-tech-gadgets-why-you-should-think-twice-before-buying-from-amazon-47faa60e6557" target="_blank">The Risks of Buying Cheap Tech</a></li>
-            </ul>
-            <h2>YouTube</h2>
-            <p>Check out some of the videos from my YouTube channel:</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/pUJwrKUejpc" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/UMRCdIPKOBA" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/xOCkys3yDb0" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-        
-        <section class="section" id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me:</p>
-            <ul style="padding-left: 50px;">
-                <li>Email: <a href="mailto:muhammadmhoque@gmail.com">muhammadmhoque@gmail.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/muhammadhoque/" target="_blank">LinkedIn Profile</a></li>
-            </ul>
         </section>
     </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Muhammad Hoque. All rights reserved.</p>
+            <nav class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="social-media">
+                <a href="https://twitter.com/hoquetechnology" target="_blank" class="social-link">Twitter</a>
+                <a href="https://youtube.com/@hoquetechnology" target="_blank" class="social-link">Medium</a>
+                <a href="https://medium.com/@hoquetechnology" target="_blank" class="social-link">YouTube</a>
+                <a href="https://linkedin.com/in/muhammadhoque" target="_blank" class="social-link">LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="social-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
