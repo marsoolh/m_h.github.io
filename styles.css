@@ -475,6 +475,25 @@ body.light-mode .blog-item {
     color: #333333;
 }
 
+/* Previous Experiences */
+.previous-experience h4 {
+    font-size: 24px;
+    color: #FFFFFF; /* Header text color */
+    margin-bottom: 20px;
+}
+
+.previous-experience p {
+    font-size: 18px;
+    color: #EEEEEE; /* Text color */
+    margin-bottom: 10px;
+}
+
+.crossed-out {
+    text-decoration: line-through; /* Cross out the text */
+    color: #1A2130; /* Change color to indicate it's inactive */
+}
+
+
 
 
 /* Footer styling */
@@ -529,3 +548,4 @@ body.light-mode .blog-item {
 .social-link:hover {
     text-decoration: underline;
 }
+
