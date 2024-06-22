@@ -1,0 +1,288 @@
+/* Style the main container */
+.container {
+    max-width: 800px;
+    margin: 100px auto 20px auto; /* Adjust margin to account for fixed header */
+    padding: 30px;
+    background-color: #000000; /* Changed to black */
+}
+
+/* Style the sections */
+.section {
+    margin-top: 20px;
+}
+
+/* Style headings */
+h1 {
+    font-size: 32px;
+    color: #EEEEEE;
+}
+
+h2 {
+    font-size: 28px;
+    color: #EEEEEE;
+    margin-top: 10px;
+}
+
+/* Apply the same style to paragraphs, unordered lists, and list items */
+p, ul, li {
+    font-size: 16px; /* Set font size */
+    color: #EEEEEE; /* Set text color */
+}
+
+/* Style links in sections */
+.section a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+/* Style for hovered links in sections */
+.section a:hover {
+    text-decoration: underline;
+}
+
+/* Add some padding for better readability */
+.section p, .section ul {
+    margin-top: 10px;
+}
+
+/* Style for video containers */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 20px; /* Add some space at the bottom */
+}
+
+/* Ensure iframes inside video containers take up full space */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* About Me section styling */
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about-me-intro {
+    background-color: #1A2130;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #EEEEEE;
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-box {
+    background-color: #8d99ae;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px; /* Fixed width for square box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
+}
+
+.contact-link {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.contact-icon {
+    width: 60px; /* Adjusted width for larger icon */
+    height: 60px; /* Adjusted height for larger icon */
+    margin-bottom: 10px;
+}
+
+/* Hover effect for the contact boxes */
+.contact-box:hover {
+    transform: translateY(-10px); /* Move the box up */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect */
+}
+
+
+.about-me-intro p {
+    font-size: 18px;
+    color: #EEEEEE;
+    margin: 10px 0;
+}
+
+.about-me-details {
+    background-color: #1A2130; /* Darker background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-details h3 {
+    font-size: 22px;
+    color: #EEEEEE;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.about-me-details p {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.about-me-details a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.about-me-details a:hover {
+    text-decoration: underline;
+}
+
+/* Education section styling */
+.education-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add gap between columns */
+}
+
+.education-item {
+    flex: 1 1 30%; /* Allow items to grow and shrink, ensuring minimum width of 30% */
+    margin-bottom: 15px;
+    background-color: #1A2130; /* Darker background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transitions for smooth animation */
+}
+
+.education-item:hover {
+    transform: translate(10px, 10px); /* Move the item down and to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect */
+    background-color: #2a3b4c; /* Change background color on hover */
+}
+
+.education-item h3 {
+    font-size: 18px;
+    color: #EEEEEE;
+    margin-bottom: 10px; /* Correct margin value */
+}
+
+.education-item p {
+    font-size: 14px;
+    color: #CCCCCC;
+}
+
+
+/* Certifications section styling */
+.certifications-section {
+    display: flex; /* Set display to flex */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 10px; /* Add gap between boxes */
+}
+
+/* Add hover animation to certification items */
+.certification-item {
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 30%; /* Ensure items are next to each other in a row of three */
+    margin-bottom: 10px; /* Add bottom margin */
+    background-color: #1A2130; /* Darker background color */
+    padding: 15px; /* Add padding */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease, background-color 0.3s ease; /* Add transitions for transform, box-shadow, border, and background-color */
+}
+
+.certification-item:hover {
+    transform: translate(10px, 10px); /* Move the item down and to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the shadow effect */
+    border: 2px solid #0078d4; /* Add a border and animate it */
+    background-color: #708090; /* Change background color to green-yellow on hover */
+}
+
+.certification-item h4 {
+    font-size: 20px; /* Set font size */
+    color: #ffffff; /* Set text color */
+    margin-top: 5px; /* Add top margin */
+    margin-bottom: 5px; /* Add bottom margin */
+}
+
+.certification-item p {
+    font-size: 14px; /* Set font size */
+    color: #CCCCCC; /* Set text color */
+}
+
+
+/* Professional Experience section styling */
+.professional-experience-section {
+    background-color: #1A2130; /* Darker background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.professional-experience-section h2 {
+   margin-top: 1px;
+   margin-bottom: 5px;
+}
+.professional-experience-item {
+    margin-bottom: 10px;
+}
+
+.professional-experience-item h4 {
+    font-size: 15px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.professional-experience-item p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.professional-experience-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.professional-experience-item li {
+    font-size: 15px;
+    color: #EEEEEE;
+    margin-bottom: 5px;
+}
+/* Add some padding for better readability */
+.section p, .section ul {
+    margin-top: 10px;
+}
+/* Previous Experiences */
+.previous-experience h4 {
+    font-size: 24px;
+    color: #FFFFFF; /* Header text color */
+    margin-bottom: 20px;
+}
+
+.previous-experience p {
+    font-size: 18px;
+    color: #EEEEEE; /* Text color */
+    margin-bottom: 10px;
+}
+
+.crossed-out {
+    text-decoration: line-through; /* Cross out the text */
+    color: #1A2130; /* Change color to indicate it's inactive */
+}

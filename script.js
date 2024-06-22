@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const tabs = document.querySelectorAll('.tab a');
+    const tabs = document.querySelectorAll('.tab a, .dropdown-content a');
     const headerHeight = document.querySelector('.header').offsetHeight;
 
     // Function to smoothly scroll to the section
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Add an event listener to all tab elements
+    // Add an event listener to all tab and dropdown elements
     tabs.forEach(tab => {
         tab.addEventListener('click', scrollToSection);
     });
