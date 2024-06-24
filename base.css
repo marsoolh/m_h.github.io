@@ -155,12 +155,12 @@ p, ul, li {
 .skills-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px; /* Add gap between columns */
+    gap: 10px; /* Add gap between columns */
 }
 
 .skill-item {
     background-color: #1A2130; /* Darker background color */
-    padding: 15px;
+    padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Add transitions for smooth animation */
@@ -172,11 +172,12 @@ p, ul, li {
     background-color: #2a3b4c; /* Change background color on hover */
 }
 
-.skill-item h3 {
-    font-size: 18px;
+.skill-item p {
+    font-size: 14px;
     color: #EEEEEE;
-    margin-bottom: 10px; /* Correct margin value */
+    margin-bottom: 20px; /* Correct margin value */
 }
+
 
 /* Education section styling */
 .education-section {
