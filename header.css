@@ -71,10 +71,6 @@ body {
     z-index: 1000;
 }
 
-/* Adjust the main content to account for the fixed headers */
-body {
-    padding-top: 90px; /* Adjust based on the combined height of your fixed headers */
-}
 
 
 /* Container for the header content */
