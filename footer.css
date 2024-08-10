@@ -1,4 +1,3 @@
-/* Footer styling */
 .footer {
     background-color: #000000;
     color: #EEEEEE;
@@ -37,16 +36,19 @@
 }
 
 .social-media {
-    margin-top: 10px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.social-link {
-    color: #0078d4;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
+.social-link img {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px;
+    filter: brightness(0) invert(1); /* Invert colors for better visibility */
+    transition: filter 0.3s ease;
 }
 
-.social-link:hover {
-    text-decoration: underline;
+.social-link img:hover {
+    filter: brightness(0.7) invert(1); /* Slightly reduce brightness on hover */
 }
