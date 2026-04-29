@@ -1,0 +1,17 @@
+/* =============================================================
+  FILE: css/animations.css
+  PURPOSE: Scroll reveal animation.
+  JS REF: js/reveal.js adds .visible when items enter viewport.
+============================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

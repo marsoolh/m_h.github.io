@@ -1,0 +1,27 @@
+/* =============================================================
+  FILE: css/tokens.css
+  PURPOSE: Global theme tokens.
+  QUICK EDITS:
+    - Change --bg for the main background.
+    - Change --brand and --accent-2 for highlight colors.
+    - Change --max for content width.
+============================================================= */
+:root {
+  --bg: #0b1020;
+  --bg-soft: #11182d;
+  --bg-card: rgba(18, 25, 44, 0.78);
+  --text: #f4f7fb;
+  --muted: #aab4c6;
+  --line: rgba(255, 255, 255, 0.12);
+
+  --brand: #7dd3fc;
+  --brand-dark: #38bdf8;
+  --accent: #a78bfa;
+  --accent-2: #34d399;
+  --warm: #fbbf24;
+
+  --shadow: 0 24px 90px rgba(0, 0, 0, 0.38);
+  --shadow-soft: 0 14px 44px rgba(0, 0, 0, 0.26);
+  --radius: 24px;
+  --max: 1180px;
+}

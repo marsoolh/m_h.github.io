@@ -1,0 +1,107 @@
+/* =============================================================
+  css/journey.css
+  Compact horizontal career timeline.
+============================================================= */
+
+/* Horizontal timeline wrapper */
+.journey-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(120px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* Thin connector line */
+.journey-track::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 26px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    var(--accent-2),
+    var(--brand),
+    var(--accent),
+    rgba(255, 255, 255, 0.14)
+  );
+}
+
+/* Timeline card */
+.journey-mini {
+  position: relative;
+  min-height: 145px;
+  padding: 52px 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.035)),
+    rgba(18, 25, 44, 0.78);
+  box-shadow: var(--shadow-soft);
+  transition: 0.22s ease;
+}
+
+/* Dot on connector line */
+.journey-mini::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 16px;
+  width: 16px;
+  height: 16px;
+  border: 4px solid #11182d;
+  border-radius: 50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 6px rgba(125, 211, 252, 0.1);
+}
+
+/* Current role highlight */
+.journey-mini.current {
+  border-color: rgba(52, 211, 153, 0.34);
+  background:
+    radial-gradient(circle at top right, rgba(52, 211, 153, 0.13), transparent 42%),
+    rgba(18, 25, 44, 0.84);
+}
+
+/* Current role dot */
+.journey-mini.current::before {
+  background: var(--accent-2);
+  box-shadow:
+    0 0 0 6px rgba(52, 211, 153, 0.12),
+    0 0 22px rgba(52, 211, 153, 0.45);
+}
+
+/* Hover effect */
+.journey-mini:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+/* Date */
+.journey-mini span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--brand);
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Role */
+.journey-mini h3 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  line-height: 1.15;
+}
+
+/* Company */
+.journey-mini p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}

@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =============================================================
+      HEAD
+      PURPOSE: Page metadata, SEO, favicon, and stylesheet link.
+    ============================================================= -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Muhammad Hoque</title>
+
+    <meta
+      name="description"
+      content="Portfolio of Muhammad Hoque, AWS AI/ML Data Center Technician and cybersecurity professional focused on secure infrastructure, IT operations, technician training, and operational reliability."
+    />
+
+    <meta property="og:title" content="Muhammad Hoque | Infrastructure, Cybersecurity & IT Operations" />
+    <meta
+      property="og:description"
+      content="AWS AI/ML data center technician with experience in infrastructure operations, cybersecurity, technical support, and technician training."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b1020" />
+
+    <link rel="icon" href="assets/favicon_io/favicon.ico" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- =============================================================
+      HEADER
+      EDIT: Navigation links are here.
+    ============================================================= -->
+    <header class="site-header">
+      <a href="#home" class="brand" aria-label="Muhammad Hoque home">
+        <span class="brand-mark">MH</span>
+        <span>Muhammad Hoque</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Main navigation">
+        <a href="#journey">journey</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">impact</a>
+        <a href="#skills">skills</a>
+        <a href="#certifications">certifications</a>
+        <a href="#education">education</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <!-- =============================================================
+      FLOATING SOCIAL BAR
+      EDIT: Replace Medium href="#" when ready.
+      ICONS: assets/social_media/
+    ============================================================= -->
+    <aside class="floating-socials" aria-label="Social and contact links">
+      <a
+        class="floating-social-link"
+        href="https://www.linkedin.com/in/muhammadhoque"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="LinkedIn"
+      >
+        <img src="assets/social_media/linkedin.svg" alt="" />
+        <span>LinkedIn</span>
+      </a>
+
+      <a
+        class="floating-social-link"
+        href="mailto:muhammadmhoque@gmail.com"
+        aria-label="Email"
+      >
+        <img src="assets/social_media/email.svg" alt="" />
+        <span>Email</span>
+      </a>
+
+      <button
+        class="floating-social-link resume-trigger"
+        type="button"
+        aria-label="Resume"
+      >
+        <span class="resume-icon">↗</span>
+        <span>Resume</span>
+      </button>
+
+    </aside>
+
+    <main>
+      <!-- =============================================================
+        SECTION: HERO
+        EDIT: Main intro, headline, and top impact numbers.
+      ============================================================= -->
+      <section class="hero section" id="home">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">
+              AI/ML Data Center Operations • Cybersecurity • IT Operations
+            </p>
+
+            <h1>
+              Muhammad Hoque
+              <span>Supporting the infrastructure that keeps AI moving.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              I support high-performance AI/ML data center environments by restoring
+              infrastructure, resolving complex incidents, training technicians,
+              improving operational workflows, and applying a security-first approach
+              to every system, device, and process I touch.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn primary">Get in Touch</a>
+              <a href="#experience" class="btn secondary">View Experience</a>
+              <button class="btn ghost resume-trigger" type="button">Resume</button>
+            </div>
+          </div>
+
+          <aside class="ops-panel reveal" aria-label="Infrastructure operations panel">
+            <div class="panel-top">
+              <span>OPERATIONS PROFILE</span>
+              <strong>AI/ML DATA CENTER</strong>
+            </div>
+
+            <div class="server-visual">
+              <div class="rack-row">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="rack-row">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="rack-row">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="rack-row">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="status-ticker">
+              <div class="ticker-track">
+                <span>CompTIA A+</span>
+                <span>CompTIA Network+</span>
+                <span>CompTIA Security+</span>
+                <span>CompTIA PenTest+</span>
+                <span>AWS Certified Cloud Practitioner</span>
+                <span>ISC2 SSCP</span>
+                <span>Rackdown Response</span>
+                <span>TRNT2 AI/ML Server</span>
+                <span>Networking</span>
+                <span>ToR Reload</span>
+                <span>ToR Replacement</span>
+                <span>PSU Failures</span>
+                <span>RCA / SOP</span>
+
+                <!-- Duplicate set creates smooth loop -->
+                <span>CompTIA A+</span>
+                <span>CompTIA Network+</span>
+                <span>CompTIA Security+</span>
+                <span>CompTIA PenTest+</span>
+                <span>AWS Certified Cloud Practitioner</span>
+                <span>ISC2 SSCP</span>
+                <span>Rackdown Response</span>
+                <span>TRNT2 AI/ML Server</span>
+                <span>Networking</span>
+                <span>ToR Reload</span>
+                <span>ToR Replacement</span>
+                <span>PSU Failures</span>
+                <span>RCA / SOP</span>
+              </div>
+            </div>
+
+            <div class="mini-stats">
+              <div>
+                <strong>Bachelor’s Degree</strong>
+                <span>Cybersecurity</span>
+              </div>
+              <div>
+                <strong>6</strong>
+                <span>IndustryCertifications</span>
+              </div>
+              <div>
+                <strong>10+ Years</strong>
+                <span>Professional Experience</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="impact-flow reveal" aria-label="Career impact metrics">
+          <article>
+            <span class="impact-label">Supported</span>
+            <strong>3,000+</strong>
+            <p>end users across Amazon IT operations</p>
+          </article>
+
+          <article>
+            <span class="impact-label">Resolved</span>
+            <strong>2,730+</strong>
+            <p>tickets across AWS and Amazon technical environments</p>
+          </article>
+
+          <article>
+            <span class="impact-label">Managed</span>
+            <strong>5,200+</strong>
+            <p>laptops, thin clients, printers, and scanners</p>
+          </article>
+
+          <article>
+            <span class="impact-label">Saved</span>
+            <strong>$55K+</strong>
+            <p>through device repair and lifecycle recovery</p>
+          </article>
+        </div>
+      </section>
+
+        <!-- =============================================================
+        SECTION: JOURNEY
+        EDIT: Career timeline items.
+      ============================================================= -->
+      <section class="section alt" id="journey">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Career Path</p>
+
+          <h2>My Journey</h2>
+
+          <p>
+            Nearly a decade of hands-on experience across operations, IT support, cybersecurity, and mission-critical AI/ML data center infrastructure.
+          </p>
+        </div>
+
+        <div class="journey-track reveal">
+          <article class="journey-mini current">
+            <span>2024 — Present</span>
+            <h3>Data Center Technician</h3>
+            <p>AWS</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2023 — 2024</span>
+            <h3>IT Equipment Coordinator</h3>
+            <p>Amazon</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2022 — 2023</span>
+            <h3>FC Associate</h3>
+            <p>Amazon · Full-time</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2020 — 2022</span>
+            <h3>FC Associate</h3>
+            <p>Amazon · Part-time</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2019 — 2021</span>
+            <h3>Delivery Driver</h3>
+            <p>Gig Platforms</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2019 — 2020</span>
+            <h3>IT Help Desk</h3>
+            <p>WCCCD</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2016 — 2019</span>
+            <h3>Cook</h3>
+            <p>Captain Jay’s</p>
+          </article>
+
+          <article class="journey-mini">
+            <span>2016</span>
+            <h3>Hi-Lo Driver</h3>
+            <p>NYX Inc.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: EXPERIENCE
+        EDIT: Professional roles and bullet points.
+      ============================================================= -->
+      <section class="section" id="experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Professional Experience</p>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience-card reveal">
+            <div class="experience-header">
+              <div>
+                <h3>Data Center Technician</h3>
+                <p>Amazon Web Services (AWS)</p>
+              </div>
+              <span>Nov 2024 — Present</span>
+            </div>
+
+            <ul>
+              <li>Maintain uptime, performance, and security of racks, servers, storage, and network gear.</li>
+              <li>Diagnose and restore AI/ML TRNT2 compute hosts and J5 network devices.</li>
+              <li>Resolve Layer 0/1 faults including cabling, optics, PDUs, power, cooling, and capacity recovery issues.</li>
+              <li>Resolved, triaged, and deep-dived 1,500+ tickets.</li>
+              <li>Trained 115+ L2/L3/L4 technicians through hands-on training, SOPs, labs, and operational guidance.</li>
+              <li>Ran 50+ rack-down drills covering ToR Reload, ToR Replacement, Emergent ToR Replacement, and PSU Failures.</li>
+              <li>Document RCAs, publish runbooks, update SOPs/MOPs, and improve repeatable recovery workflows.</li>
+              <li>Support security practices including asset chain-of-custody, drive sanitization, patch compliance, access reviews, and clean documentation.</li>
+            </ul>
+
+            <div class="tags">
+              <span>AI/ML Infrastructure</span>
+              <span>TRNT2</span>
+              <span>J5 Networking</span>
+              <span>ToR Reload</span>
+              <span>ToR Replacement</span>
+              <span>PSU Failures</span>
+              <span>RCA</span>
+              <span>SOP / MOP</span>
+              <span>Security Compliance</span>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-header">
+              <div>
+                <h3>IT Equipment Coordinator / Technical Ops Support</h3>
+                <p>Amazon — Michigan, United States</p>
+              </div>
+              <span>2023 — 2024</span>
+            </div>
+
+            <ul>
+              <li>Managed 400+ laptops, 1,200 thin clients, 1,000 printers, and 3,000 scanners for warehouse operations.</li>
+              <li>Supported 3,000+ users with 99.8% customer satisfaction and resolved 1,230+ support tickets.</li>
+              <li>Repaired 100+ laptops and 100+ Zebra printers, saving more than $45,000 in replacement costs.</li>
+              <li>Coordinated $75,000+ in equipment procurement, vendor partnerships, returns, and disposal processes.</li>
+            </ul>
+
+            <div class="tags">
+              <span>Inventory Management</span>
+              <span>Technical Support</span>
+              <span>Procurement</span>
+              <span>Vendor Coordination</span>
+              <span>Device Repair</span>
+              <span>Cost Savings</span>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-header">
+              <div>
+                <h3>FC Associate</h3>
+                <p>Amazon</p>
+              </div>
+              <span>2020 — 2023</span>
+            </div>
+
+            <ul>
+              <li>Worked part-time from 2020 to 2022 and full-time from 2022 to 2023 across fulfillment center roles.</li>
+              <li>Supported warehouse operations, quality, execution, customer outcomes, and cross-functional teamwork.</li>
+            </ul>
+
+            <div class="tags">
+              <span>Operations</span>
+              <span>Quality</span>
+              <span>Teamwork</span>
+              <span>Process Execution</span>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <div class="experience-header">
+              <div>
+                <h3>IT Help Desk / Work-Study</h3>
+                <p>Wayne County Community College District</p>
+              </div>
+              <span>2019 — 2020</span>
+            </div>
+
+            <ul>
+              <li>Provided front-line IT help desk support in an academic environment.</li>
+              <li>Supported users with troubleshooting, account access, hardware/software issues, and basic technical guidance.</li>
+            </ul>
+
+            <div class="tags">
+              <span>Help Desk</span>
+              <span>User Support</span>
+              <span>Troubleshooting</span>
+              <span>Academic IT</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: LEADERSHIP / IMPACT HIGHLIGHTS
+        PURPOSE: Visual leadership-style cards for key operational wins.
+      ============================================================= -->
+      <section class="section leadership-section" id="projects">
+        <div class="section-heading reveal leadership-heading">
+          <p class="eyebrow corner-label">Impact</p>
+
+          <h2>Leadership Highlights</h2>
+
+          <p>
+            Key operational outcomes across AWS data center training, launch support,
+            hardware remediation, compliance, and infrastructure readiness.
+          </p>
+        </div>
+
+        <div class="leadership-grid reveal">
+          <article class="leadership-card">
+            <strong>115+</strong>
+            <h3>Technicians Trained</h3>
+            <p>
+              Trained and mentored L2/L3/L4 technicians through in-class and hands-on coaching, SOPs, labs,
+              and scenario-based troubleshooting.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>50+</strong>
+            <h3>Rackdown Trainings</h3>
+            <p>
+              Delivered rackdown training for PSU failures, ToR reloads,
+              ToR replacements, and emergent ToR replacement procedures.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>RZ</strong>
+            <h3>Red Zone Laptop Readiness</h3>
+            <p>
+              Supported Data Center Red Zone laptop readiness by managing setup, deployment,
+              compliance audits, repairs, and secure decommissioning with 100% compliance,
+              zero audit discrepancies, and $9.8K saved through device recovery.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>300</strong>
+            <h3>Port Issues Resolved</h3>
+            <p>
+              Supported MCM audit and remediation across 113 bricks, 64 spines,
+              8 NDFs, and 50 fusion racks.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>300+</strong>
+            <h3>BBUs / PSUs Deployed</h3>
+            <p>
+              Supported SBN campus launch by deploying infrastructure equipment
+              across SBN100, SBN101, SBN103, and SBN104.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>300+</strong>
+            <h3>Fiber Cables Labeled</h3>
+            <p>
+              Labeled SC/LC fiber, patched OSFP-XD cables, and supported
+              high-speed inter-rack GPU connectivity.
+            </p>
+          </article>
+
+          <article class="leadership-card">
+            <strong>MLZ</strong>
+            <h3>Training Program Support</h3>
+            <p>
+              Helped develop and support MLZ OJT/ILT training delivery,
+              trainer guidance, and onboarding structure.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: SKILLS
+        EDIT: Skill categories and tags.
+      ============================================================= -->
+      <section class="section" id="skills">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Technical Expertise</p>
+          <h2>Skills & Toolset</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Data Center Infrastructure</h3>
+            <div class="skill-tags">
+              <span>Rack & Stack</span>
+              <span>Servers</span>
+              <span>Storage</span>
+              <span>Optics</span>
+              <span>PDUs</span>
+              <span>Cabling</span>
+              <span>Layer 0/1</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>AI/ML Operations</h3>
+            <div class="skill-tags">
+              <span>TRNT2 Hosts</span>
+              <span>J5 Network Devices</span>
+              <span>Fleet Imaging</span>
+              <span>Firmware</span>
+              <span>Capacity Recovery</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Rackdown & Recovery</h3>
+            <div class="skill-tags">
+              <span>ToR Reload</span>
+              <span>ToR Replacement</span>
+              <span>Emergent ToR Replacement</span>
+              <span>PSU Failures</span>
+              <span>Recovery Sequencing</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Cybersecurity</h3>
+            <div class="skill-tags">
+              <span>Security+</span>
+              <span>PenTest+</span>
+              <span>Network+</span>
+              <span>SSCP</span>
+              <span>Access Reviews</span>
+              <span>Sanitization</span>
+              <span>Compliance</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>IT Operations</h3>
+            <div class="skill-tags">
+              <span>Inventory</span>
+              <span>Technical Support</span>
+              <span>Procurement</span>
+              <span>Vendor Mgmt</span>
+              <span>Ticketing</span>
+              <span>Asset Lifecycle</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3>Documentation & Process</h3>
+            <div class="skill-tags">
+              <span>RCA</span>
+              <span>SOP</span>
+              <span>MOP</span>
+              <span>Runbooks</span>
+              <span>Audit Records</span>
+              <span>Training Labs</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: CERTIFICATIONS
+        EDIT: Certification names and Credly links.
+      ============================================================= -->
+      <section class="section alt" id="certifications">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Credentials</p>
+          <h2>Certifications</h2>
+          <p>
+            Verified cybersecurity, cloud, infrastructure, and IT operations certifications.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/c922bbb2-5f6c-43e8-9009-4960c3bbf507/public_url"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CompTIA PenTest+
+              </a>
+            </h3>
+            <p>Penetration testing, vulnerability assessment, and reporting.</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/49373eb2-af72-4974-86c9-9117034bcd69/public_url"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CompTIA Security+
+              </a>
+            </h3>
+            <p>Security concepts, risk management, controls, and secure operations.</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/54ac0f98-4ac2-4345-a6c9-bf8a344fb60b"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CompTIA Network+
+              </a>
+            </h3>
+            <p>Networking concepts, infrastructure, troubleshooting, and operations.</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/1c8ae2ce-284b-4c17-8652-017c73066feb"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CompTIA A+
+              </a>
+            </h3>
+            <p>IT support, hardware, operating systems, troubleshooting, and device support.</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/5138afc3-fd93-474d-a261-d7a530ef8d2d"
+                target="_blank"
+                rel="noreferrer"
+              >
+                AWS Certified Cloud Practitioner
+              </a>
+            </h3>
+            <p>AWS cloud fundamentals, security, services, architecture, and cloud value.</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <h3>
+              <a
+                href="https://www.credly.com/badges/51cbbbab-9d72-4098-9b42-a0367685e46d/public_url"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Associate of ISC2 SSCP
+              </a>
+            </h3>
+            <p>Security administration, access controls, monitoring, and operational security.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: EDUCATION
+        EDIT: Schools, degrees, years, GPA, honors.
+      ============================================================= -->
+      <section class="section" id="education">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Education</p>
+          <h2>Academic Background</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card reveal">
+            <h3>Bachelor of Science</h3>
+            <p>Cybersecurity and Information Assurance</p>
+            <strong>Western Governors University</strong>
+            <div class="education-meta">
+              <span>2022 — 2023</span>
+            </div>
+          </article>
+
+          <article class="education-card reveal">
+            <h3>Associate of Applied Science</h3>
+            <p>Computer Information Systems and Cybersecurity</p>
+            <strong>Wayne County Community College District</strong>
+            <div class="education-meta">
+              <span>2019 — 2021</span>
+              <span>GPA: 4.00</span>
+              <span>Summa Cum Laude</span>
+              <span>Detroit, MI</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================================
+        SECTION: CONTACT
+        EDIT: Contact CTA text and links.
+      ============================================================= -->
+      <section class="section alt" id="contact">
+        <div class="contact-card reveal">
+          <div>
+            <p class="eyebrow">Let’s Connect</p>
+
+            <h2>
+              Open to roles where uptime, security, and execution matter.
+            </h2>
+
+            <p>
+              I’m interested in opportunities where I can improve uptime, support
+              critical systems, strengthen operational security, train technical teams,
+              and build repeatable infrastructure processes.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:muhammadmhoque@gmail.com">Email Me</a>
+
+            <a
+              class="btn secondary"
+              href="https://www.linkedin.com/in/muhammadhoque"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <button class="btn ghost resume-trigger" type="button">Resume</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================================
+      FOOTER
+    ============================================================= -->
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> Muhammad Hoque — Built for secure, reliable infrastructure.
+      </p>
+      <a href="#home">Back to top ↑</a>
+    </footer>
+
+    <!-- =============================================================
+      RESUME MODAL
+      EDIT: Popup text here.
+    ============================================================= -->
+    <div class="modal" id="resumeModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+        <button
+          class="modal-close"
+          type="button"
+          data-close-modal
+          aria-label="Close popup"
+        >
+          ×
+        </button>
+
+        <p class="eyebrow">Resume</p>
+
+        <h2 id="resumeModalTitle">Resume PDF coming soon</h2>
+
+        <p>
+          Contact
+          <a href="mailto:muhammadmhoque@gmail.com">muhammadmhoque@gmail.com</a>
+          for the latest resume.
+        </p>
+
+        <a class="btn primary" href="mailto:muhammadmhoque@gmail.com">
+          Email Muhammad
+        </a>
+      </div>
+    </div>
+
+    <!-- =============================================================
+      SCRIPTS
+      ORDER MATTERS: load feature scripts before script.js.
+    ============================================================= -->
+    <script src="js/navigation.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

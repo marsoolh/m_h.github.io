@@ -1,0 +1,44 @@
+/* =============================================================
+  FILE: css/buttons.css
+  PURPOSE: Shared button styles.
+============================================================= */
+.hero-actions,
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-weight: 900;
+  transition: 0.22s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn.primary {
+  color: #08111f;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--brand), var(--accent-2));
+}
+
+.btn.secondary {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn.ghost {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}

@@ -1,0 +1,66 @@
+/* =============================================================
+  FILE: css/modal.css
+  PURPOSE: Resume popup modal.
+============================================================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  padding: 22px;
+}
+
+.modal.open {
+  display: grid;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.74);
+  backdrop-filter: blur(10px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(100%, 520px);
+  padding: 34px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(125, 211, 252, 0.14), transparent 40%),
+    #11182d;
+  box-shadow: var(--shadow);
+}
+
+.modal-card h2 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.modal-card p {
+  color: var(--muted);
+}
+
+.modal-card a:not(.btn) {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  font-size: 1.4rem;
+}
