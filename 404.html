@@ -1,0 +1,43 @@
+<!doctype html>
+<!--
+  404 page. GitHub Pages serves this automatically for any unmatched
+  path on the site, so it needs to be at the repo root alongside
+  index.html. Reuses styles.css so it stays consistent for free.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — Muhammad Hoque</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="/favicon/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+<meta name="theme-color" content="#0b0c0d" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+<style>
+  .nf{min-height:100vh;display:flex;align-items:center;}
+  .nf-in{width:min(100% - 48px,var(--wrap));margin-inline:auto;}
+  .nf-code{font-family:var(--mono);font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;}
+  .nf h1{font-size:clamp(34px,6vw,60px);font-weight:700;letter-spacing:-0.03em;max-width:16ch;}
+  .nf p{margin-top:18px;color:var(--ink-2);font-size:16.5px;max-width:52ch;}
+  .nf-do{display:flex;flex-wrap:wrap;gap:11px;margin-top:32px;}
+</style>
+</head>
+<body>
+<div class="nf">
+  <div class="nf-in">
+    <p class="nf-code">Error 404 — Not found</p>
+    <h1>That page doesn't exist.</h1>
+    <p>The link may be out of date, or the address might have a typo in it. Everything on this site lives on the homepage.</p>
+    <div class="nf-do">
+      <a class="btn fill" href="/">Back to homepage</a>
+      <a class="btn line" href="mailto:muhammadmhoque@gmail.com">Email me</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
